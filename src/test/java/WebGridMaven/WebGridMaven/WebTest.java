@@ -15,16 +15,14 @@ import java.net.URL;
 
 public class WebTest {
 
-    //private static final String ACCESS_KEY = System.getenv("access_key");
-	private static final String ACCESS_KEY = "eyJ4cC51IjoxMjcsInhwLnAiOjIsInhwLm0iOiJNVFV5TXpnM01qRTVNRFl3TnciLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE4NDcwNzcyMDAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.QTZ3Ws3p_LaQ7_GM0xcnfKT7iMqSXG9Cw6V-vubq6ew";
+    private static final String ACCESS_KEY = System.getenv("access_key");
     private WebDriver driver;
     private URL url;
     private DesiredCapabilities dc = new DesiredCapabilities();
 
     @Parameters({"browser_name"})
     @BeforeMethod
-    public void setUp() throws Exception {
-    	String browser_name = "chrome";
+    public void setUp(String browser_name) throws Exception {
         url = new URL("https://sales.experitest.com:443/wd/hub");
         dc.setCapability(CapabilityType.BROWSER_NAME, browser_name);
         dc.setCapability(CapabilityType.VERSION, "Any");
