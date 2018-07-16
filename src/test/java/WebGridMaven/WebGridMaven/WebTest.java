@@ -29,7 +29,6 @@ public class WebTest {
     		url = new URL("https://sales.experitest.com:443/wd/hub");
         else
         	url = new URL("https://uscloud.experitest.com:443/wd/hub");
-        url = new URL("https://sales.experitest.com:443/wd/hub");
         dc.setCapability(CapabilityType.BROWSER_NAME, browser_name);
         dc.setCapability(CapabilityType.VERSION, "Any");
         dc.setCapability(CapabilityType.PLATFORM, Platform.ANY);
