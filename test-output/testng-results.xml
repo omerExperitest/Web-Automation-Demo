@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10656" started-at="2018-07-16T10:03:56Z" finished-at="2018-07-16T10:04:06Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10656" started-at="2018-07-16T10:03:56Z" finished-at="2018-07-16T10:04:06Z">
+      <class name="WebGridMaven.WebGridMaven.WebTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:WebGridMaven.WebGridMaven.WebTest@5622fdf]" name="setUp" is-config="true" duration-ms="4841" started-at="2018-07-16T13:03:56Z" finished-at="2018-07-16T13:04:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testExperitest()[pri:0, instance:WebGridMaven.WebGridMaven.WebTest@5622fdf]" name="testExperitest" duration-ms="5580" started-at="2018-07-16T13:04:00Z" finished-at="2018-07-16T13:04:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExperitest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:WebGridMaven.WebGridMaven.WebTest@5622fdf]" name="tearDown" is-config="true" duration-ms="215" started-at="2018-07-16T13:04:06Z" finished-at="2018-07-16T13:04:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- WebGridMaven.WebGridMaven.WebTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
