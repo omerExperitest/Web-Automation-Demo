@@ -46,6 +46,18 @@ public class WebTest {
         password_field.sendKeys("Experitest");
         login_button.click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"login\"]/form/div[3]/input[3]")));
+        WebElement create_account = driver.findElement(By.xpath("//*[@id=\"login\"]/p/a"));
+        create_account.click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("user_login")));
+        username_field = driver.findElement(By.id("user_login"));
+        username_field.sendKeys("Experitest");
+        WebElement email_field = driver.findElement(By.id("user_email"));
+        email_field.sendKeys("experitest@experitest.com");
+        password_field = driver.findElement(By.id("user_password"));
+        password_field.sendKeys("Experitest");
+        WebElement signup_button = driver.findElement(By.id("signup_button"));
+        signup_button.click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"signup-form\"]/div")));
     }
 
     @AfterMethod
