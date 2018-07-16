@@ -10,6 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.android.AndroidDriver;
+
 import java.net.URL;
 
 
@@ -23,12 +25,14 @@ public class WebTest {
     @Parameters({"browser_name"})
     @BeforeMethod
     public void setUp(String browser_name) throws Exception {
+    	if(System.getenv("cloud").equals("Sales"))
+    		url = new URL("https://sales.experitest.com:443/wd/hub");
+        else
+        	url = new URL("https://uscloud.experitest.com:443/wd/hub");
         url = new URL("https://sales.experitest.com:443/wd/hub");
         dc.setCapability(CapabilityType.BROWSER_NAME, browser_name);
         dc.setCapability(CapabilityType.VERSION, "Any");
         dc.setCapability(CapabilityType.PLATFORM, Platform.ANY);
-        System.out.println("***" + ACCESS_KEY);
-        System.out.println("***" + System.getenv("cloud"));
         dc.setCapability("accessKey", ACCESS_KEY);
         dc.setCapability("testName", "Grid Demo - Web - " + browser_name);
         driver = new RemoteWebDriver(url, dc);
