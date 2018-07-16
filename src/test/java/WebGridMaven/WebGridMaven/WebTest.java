@@ -27,6 +27,8 @@ public class WebTest {
         dc.setCapability(CapabilityType.BROWSER_NAME, browser_name);
         dc.setCapability(CapabilityType.VERSION, "Any");
         dc.setCapability(CapabilityType.PLATFORM, Platform.ANY);
+        System.out.println("***" + ACCESS_KEY);
+        System.out.println("***" + System.getenv("cloud"));
         dc.setCapability("accessKey", ACCESS_KEY);
         dc.setCapability("testName", "Grid Demo - Web - " + browser_name);
         driver = new RemoteWebDriver(url, dc);
