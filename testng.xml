@@ -4,18 +4,28 @@
   
   <test name="Test1">
   <parameter name="browser_name" value="chrome"/>
+  <parameter name="platform" value="win"/>
     <classes>
       <class name="WebGridMaven.WebGridMaven.WebTest"/>  
     </classes>
   </test>
   <test name="Test2">
+  <parameter name="platform" value="win"/>
   <parameter name="browser_name" value="firefox"/>
     <classes>
       <class name="WebGridMaven.WebGridMaven.WebTest"/>  
     </classes>
   </test>
    <test name="Test3">
+   <parameter name="platform" value="win"/>
    <parameter name="browser_name" value="internet explorer"/>
+    <classes>
+      <class name="WebGridMaven.WebGridMaven.WebTest"/>  
+    </classes>
+  </test>
+  <test name="Test4">
+  <parameter name="platform" value="mac"/>
+   <parameter name="browser_name" value="safari"/>
     <classes>
       <class name="WebGridMaven.WebGridMaven.WebTest"/>  
     </classes>

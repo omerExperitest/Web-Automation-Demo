@@ -19,16 +19,19 @@ public class WebTest {
     private URL url;
     private DesiredCapabilities dc = new DesiredCapabilities();
 
-    @Parameters({"browser_name"})
+    @Parameters({"browser_name", "platform"})
     @BeforeMethod
-    public void setUp(String browser_name) throws Exception {
+    public void setUp(String browser_name, String platform) throws Exception {
     	if(System.getenv("cloud").equals("Sales"))
     		url = new URL("https://sales.experitest.com:443/wd/hub");
         else
         	url = new URL("https://uscloud.experitest.com:443/wd/hub");
         dc.setCapability(CapabilityType.BROWSER_NAME, browser_name);
         dc.setCapability(CapabilityType.VERSION, "Any");
-        dc.setCapability(CapabilityType.PLATFORM, Platform.ANY);
+        if(platform.equals("win"))
+        	dc.setCapability(CapabilityType.PLATFORM, Platform.XP);
+        else
+        	dc.setCapability(CapabilityType.PLATFORM, Platform.MAC);
         dc.setCapability("accessKey", ACCESS_KEY);
         dc.setCapability("testName", "Grid Demo - Web - " + browser_name);
         driver = new RemoteWebDriver(url, dc);
