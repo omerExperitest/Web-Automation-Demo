@@ -24,6 +24,8 @@ public class WebTest {
     public void setUp(String browser_name, String platform) throws Exception {
     	if(System.getenv("cloud").equals("Sales"))
     		url = new URL("https://sales.experitest.com:443/wd/hub");
+        else if(System.getenv("cloud").equals("ATB"))
+            url = new URL("https://atb.experitest.com:443/wd/hub");
         else
         	url = new URL("https://uscloud.experitest.com:443/wd/hub");
         dc.setCapability(CapabilityType.BROWSER_NAME, browser_name);
