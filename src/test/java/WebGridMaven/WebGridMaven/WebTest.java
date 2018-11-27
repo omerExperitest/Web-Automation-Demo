@@ -67,8 +67,9 @@ public class WebTest {
 
     @AfterMethod
     public void tearDown() {
-        System.out.println("The link to the report is ================== " + dc.getCapability("reportUrl") + " ==================");
-//        System.out.println("---------------------===========================*******************---------------------===========================*******************/n---------------------===========================*******************");
+        Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+        String urlLink = cap.getCapability("reportUrl").toString();
+        System.out.println("The link to the report is ================== " + urlLink + " ==================");
         driver.quit();
     }
 
