@@ -29,7 +29,7 @@ public class WebTest {
         dc.setCapability(CapabilityType.BROWSER_NAME, browser_name);
         dc.setCapability(CapabilityType.VERSION, "Any");
         if(platform.equals("win"))
-        	dc.setCapability(CapabilityType.PLATFORM, Platform.XP);
+        	dc.setCapability(CapabilityType.PLATFORM, Platform.ANY);
         else
         	dc.setCapability(CapabilityType.PLATFORM, Platform.MAC);
         dc.setCapability("accessKey", ACCESS_KEY);
