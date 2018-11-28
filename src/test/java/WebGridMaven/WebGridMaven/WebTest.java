@@ -37,7 +37,7 @@ public class WebTest {
         	dc.setCapability(CapabilityType.PLATFORM, Platform.MAC);
         dc.setCapability("accessKey", ACCESS_KEY);
         dc.setCapability("testName", "Grid Demo - Web - " + browser_name);
-        dc.setCapability("buildId",buildId);
+        dc.setCapability("build.id",buildId);
         driver = new RemoteWebDriver(url, dc);
     }
 
