@@ -15,6 +15,7 @@ import java.net.URL;
 public class WebTest {
 
     private static final String ACCESS_KEY = System.getenv("access_key");
+    private static final String buildId = System.getenv("BUILD_ID");
     private WebDriver driver;
     private URL url;
     private DesiredCapabilities dc = new DesiredCapabilities();
@@ -36,6 +37,7 @@ public class WebTest {
         	dc.setCapability(CapabilityType.PLATFORM, Platform.MAC);
         dc.setCapability("accessKey", ACCESS_KEY);
         dc.setCapability("testName", "Grid Demo - Web - " + browser_name);
+        dc.setCapability("buildId",buildId);
         driver = new RemoteWebDriver(url, dc);
     }
 
