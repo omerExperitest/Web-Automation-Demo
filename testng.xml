@@ -32,7 +32,7 @@
   </test>
    <test name="Test5">
    <parameter name="platform" value="win"/>
-   <parameter name="browser_name" value="internet explorer"/>
+   <parameter name="browser_name" value="safari"/>
     <classes>
       <class name="WebGridMaven.WebGridMaven.WebTest"/>  
     </classes>
